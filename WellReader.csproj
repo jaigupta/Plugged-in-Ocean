@@ -1,0 +1,281 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0D92F217-2D82-4C9C-B5C4-76D0857D24E1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WellReader</RootNamespace>
+    <AssemblyName>WellReader</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>c:\program files\schlumberger\petrel 2010\Extensions\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>c:\program files\schlumberger\petrel 2010\Extensions\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Infragistics2.Shared.v7.3, Version=7.3.20073.38, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.Misc.v7.3, Version=7.3.20073.38, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinDock.v7.3, Version=7.3.20073.38, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinEditors.v7.3, Version=7.3.20073.38, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinGrid.v7.3, Version=7.3.20073.38, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinStatusBar.v7.3, Version=7.3.20073.38, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinTabControl.v7.3, Version=7.3.20073.38, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinToolbars.v7.3, Version=7.3.20073.38, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.UltraWinTree.v7.3, Version=7.3.20073.38, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics2.Win.v7.3, Version=7.3.20073.38, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="InventorNet, Version=7.2.0.0, Culture=neutral, PublicKeyToken=cc281c744497d5fd, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="SbLinear, Version=7.2.0.0, Culture=neutral, PublicKeyToken=3fc0c0785da6197c, processorArchitecture=x86" />
+    <Reference Include="Slb.Ocean.Catalogs, Version=3.2010.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL" />
+    <Reference Include="Slb.Ocean.Coordinates, Version=3.2010.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL" />
+    <Reference Include="Slb.Ocean.CoordinateSystems, Version=3.2010.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL" />
+    <Reference Include="Slb.Ocean.Core.ReferenceImpl, Version=3.2010.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL" />
+    <Reference Include="Slb.Ocean.Data, Version=3.2010.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL" />
+    <Reference Include="Slb.Ocean.Petrel.Basics, Version=3.2010.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL" />
+    <Reference Include="Slb.Ocean.Petrel.DomainObject, Version=3.2010.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL" />
+    <Reference Include="Slb.Ocean.Petrel.DomainObject.FrameworkModeling, Version=3.2010.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL" />
+    <Reference Include="Slb.Ocean.Petrel.DomainObjectExtensions, Version=3.2010.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL" />
+    <Reference Include="Slb.Ocean.Petrel.Simulation.EclipseKeywords, Version=3.2010.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL" />
+    <Reference Include="Slb.Ocean.Petrel.UI.Controls, Version=3.2010.0.0, Culture=neutral, PublicKeyToken=da9605198f529641, processorArchitecture=MSIL" />
+    <Reference Include="Slb.Ocean.ReferenceImpl, Version=3.2010.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL" />
+    <Reference Include="Slb.Ocean.Units, Version=3.2010.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=x86" />
+    <Reference Include="Slb.Ocean.Units.ReferenceCatalog, Version=3.2010.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL" />
+    <Reference Include="Slb.Ocean.Units.ReferenceImpl, Version=3.2010.0.0, Culture=neutral, PublicKeyToken=14ef4a483ef6a64b, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="system.drawing" />
+    <Reference Include="system.windows.forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Slb.Ocean.Core">
+      <Name>Slb.Ocean.Core</Name>
+      <HintPath>c:\program files\schlumberger\petrel 2010\Public\slb.ocean.core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Slb.Ocean.Petrel">
+      <Name>Slb.Ocean.Petrel</Name>
+      <HintPath>c:\program files\schlumberger\petrel 2010\Public\slb.ocean.petrel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Slb.Ocean.Basics">
+      <Name>Slb.Ocean.Basics</Name>
+      <HintPath>c:\program files\schlumberger\petrel 2010\Public\Slb.Ocean.Basics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Slb.Ocean.Geometry">
+      <Name>Slb.Ocean.Geometry</Name>
+      <HintPath>c:\program files\schlumberger\petrel 2010\Public\Slb.Ocean.Geometry.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChatServer.cs" />
+    <Compile Include="ClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientForm.designer.cs">
+      <DependentUpon>ClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorHsl.cs" />
+    <Compile Include="ColorHsv.cs" />
+    <Compile Include="ColorRgb.cs" />
+    <Compile Include="ColorSchema.cs" />
+    <Compile Include="Consts.cs" />
+    <Compile Include="CrossPlotUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrossPlotUI.Designer.cs">
+      <DependentUpon>CrossPlotUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Density.cs" />
+    <Compile Include="Discuss.cs" />
+    <Compile Include="ElasticConstants.cs" />
+    <Compile Include="FTReciever.cs" />
+    <Compile Include="FTSender.cs" />
+    <Compile Include="FunctionCompiler.cs" />
+    <Compile Include="GeoCommunication.cs" />
+    <Compile Include="help.Designer.cs" />
+    <Compile Include="help1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>help.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Impedance.cs" />
+    <Compile Include="ObjReciever.cs" />
+    <Compile Include="objSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="objSelect.Designer.cs">
+      <DependentUpon>objSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjSender.cs" />
+    <Compile Include="Plot3DMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plot3DMainForm.designer.cs">
+      <DependentUpon>Plot3DMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Porosity.cs" />
+    <Compile Include="PrivateChat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrivateChat.Designer.cs">
+      <DependentUpon>PrivateChat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RACO.cs" />
+    <Compile Include="Reader.cs" />
+    <Compile Include="ReaderUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReaderUI.designer.cs">
+      <DependentUpon>ReaderUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReflectionCoefficient.cs" />
+    <Compile Include="Reservoir.cs" />
+    <Compile Include="Resource_chracterizer.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource_chracterizer.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ServerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServerForm.Designer.cs">
+      <DependentUpon>ServerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShaleVolume.cs" />
+    <Compile Include="Surface3DRenderer.cs" />
+    <Compile Include="Surface3DRenderer_crossPlot.cs" />
+    <Compile Include="ThreeLogCheck.cs" />
+    <Compile Include="TwoLogCheck.cs" />
+    <Compile Include="Velocity.cs" />
+    <Compile Include="WellLogReader.cs" />
+    <Compile Include="WellLogReaderUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WellLogReaderUI.designer.cs">
+      <DependentUpon>WellLogReaderUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WellReader.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LogAnalysisUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LogAnalysisUI.Designer.cs">
+      <DependentUpon>LogAnalysisUI.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ClientForm.resx">
+      <DependentUpon>ClientForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrossPlotUI.resx">
+      <DependentUpon>CrossPlotUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="help.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>help1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="objSelect.resx">
+      <DependentUpon>objSelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plot3DMainForm.resx">
+      <DependentUpon>Plot3DMainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrivateChat.resx">
+      <DependentUpon>PrivateChat.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource_chracterizer.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource_chracterizer.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServerForm.resx">
+      <DependentUpon>ServerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WellLogReaderUI.resx">
+      <DependentUpon>WellLogReaderUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogAnalysisUI.resx">
+      <DependentUpon>LogAnalysisUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Well_and_Reservoir_Characterization.chm" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GeoCom 3D Visualizer.chm" />
+    <None Include="Resources\GeoCom.chm" />
+    <None Include="Resources\GeoCom_3D_Crossplot.chm" />
+    <None Include="Resources\Geocom_Chat.chm" />
+    <None Include="Resources\robot12.jpg" />
+    <None Include="Resources\Well Log Analysis.chm" />
+    <None Include="Resources\Well_Log_Analysis.chm" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+		Other similar extension points exist, see Microsoft.Common.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+</Project>
